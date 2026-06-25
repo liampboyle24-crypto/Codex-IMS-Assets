@@ -85,14 +85,18 @@ a:focus-visible {
 .brand-lockup {
   display: inline-flex;
   align-items: center;
-  width: 138px;
+  width: 158px;
   text-decoration: none;
 }
 
 .logo {
   display: block;
-  width: 138px;
+  width: 158px;
   height: auto;
+}
+
+.provided-logo {
+  filter: drop-shadow(0 10px 24px rgba(0, 24, 48, 0.24));
 }
 
 .contact-card {
@@ -189,7 +193,7 @@ h3 {
 }
 
 .hero-proof span,
-.proof-row span {
+.proof-ribbon span {
   border: 1px solid var(--line-dark);
   border-radius: 999px;
   padding: 8px 12px;
@@ -466,36 +470,81 @@ h3 {
   text-transform: uppercase;
 }
 
-.outcome {
+.proof {
   padding: 68px var(--gutter);
   color: #fff;
   background:
     linear-gradient(135deg, rgba(10,110,168,0.18), transparent 52%),
+    radial-gradient(circle at 84% 14%, rgba(201,162,77,0.16), transparent 30%),
     var(--navy-2);
 }
 
-.outcome-copy { max-width: 860px; }
-
-.outcome-grid {
+.proof-copy {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.7fr);
+  gap: clamp(28px, 5vw, 64px);
+  align-items: end;
+  max-width: 1080px;
+}
+
+.proof-copy p:not(.eyebrow) {
+  color: #dbe6f1;
+  font-size: 1.08rem;
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: 1.22fr repeat(3, 1fr);
   gap: 1px;
-  margin-top: 34px;
+  margin-top: 36px;
   border: 1px solid var(--line-dark);
   background: var(--line-dark);
 }
 
-.outcome-grid p {
-  min-height: 130px;
-  margin: 0;
-  padding: 24px;
+.proof-card {
+  min-height: 270px;
+  padding: 26px;
   background: rgba(255,255,255,0.055);
-  font-size: 1.14rem;
-  font-weight: 800;
-  line-height: 1.18;
 }
 
-.proof-row {
+.proof-card-feature {
+  background:
+    linear-gradient(160deg, rgba(201,162,77,0.2), rgba(255,255,255,0.055));
+}
+
+.proof-card span {
+  display: block;
+  margin-bottom: 24px;
+  color: var(--gold-2);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.proof-card strong {
+  display: block;
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: clamp(2.4rem, 5vw, 5.1rem);
+  font-stretch: 112%;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 0.86;
+}
+
+.proof-card h3 {
+  color: #fff;
+  font-size: 1.12rem;
+}
+
+.proof-card p {
+  margin: 0;
+  color: #dbe6f1;
+  font-size: 0.98rem;
+}
+
+.proof-ribbon {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -534,7 +583,7 @@ h3 {
   .contrast,
   .operating-model,
   .pillar-grid,
-  .outcome-grid {
+  .proof-grid {
     grid-template-columns: 1fr;
   }
 
@@ -603,14 +652,14 @@ h3 {
   .contrast-panel,
   .operating-model,
   .pillars,
-  .outcome,
+  .proof,
   .cta {
     break-inside: avoid;
   }
 
   .hero,
   .managed-panel,
-  .outcome {
+  .proof {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }
