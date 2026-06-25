@@ -200,6 +200,39 @@ h3 {
   text-transform: uppercase;
 }
 
+.decision-rail {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  max-width: 780px;
+  margin: 36px 0 0;
+  border: 1px solid var(--line-dark);
+  background: var(--line-dark);
+}
+
+.decision-rail div {
+  min-height: 118px;
+  padding: 18px;
+  background: rgba(0, 24, 48, 0.5);
+}
+
+.decision-rail dt {
+  margin-bottom: 18px;
+  color: var(--gold-2);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.decision-rail dd {
+  margin: 0;
+  color: #dbe6f1;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
 .command-layer {
   position: relative;
   min-height: 560px;
@@ -496,6 +529,7 @@ h3 {
 
 @media (max-width: 980px) {
   .hero-grid,
+  .decision-rail,
   .brief-section,
   .contrast,
   .operating-model,

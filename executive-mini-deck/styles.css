@@ -300,6 +300,28 @@ p {
   line-height: 1.02;
 }
 
+.slide-note {
+  position: absolute;
+  right: 56px;
+  bottom: 34px;
+  left: 56px;
+  z-index: 2;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: #dbe6f1;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.light-note {
+  bottom: 82px;
+  border-top-color: var(--line-ink);
+  color: var(--slate);
+}
+
 .slide-contact {
   position: absolute;
   right: 56px;
@@ -332,6 +354,11 @@ p {
   }
 
   .drift-diagram { height: 360px; }
+
+  .slide-note {
+    position: static;
+    margin-top: 30px;
+  }
 
   .slide-contact {
     position: static;
