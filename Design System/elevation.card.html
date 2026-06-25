@@ -1,0 +1,29 @@
+<!-- @dsCard group="Brand" viewport="700x220" name="Logo Lockups" subtitle="White on navy · filtered to navy on mist · never a text wordmark substitute" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; display: flex; height: 220px; font-family: var(--font-mono); }
+  .half { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 28px; position: relative; }
+  .half--dark  { background: linear-gradient(165deg, var(--navy), var(--navy-2) 78%); }
+  .half--light { background: var(--cream); border: 1px solid var(--line-light); }
+  img { width: 160px; height: auto; display: block; }
+  .note { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+  .divider { width: 1px; background: var(--line-light); }
+</style>
+</head>
+<body>
+<div class="half half--dark">
+  <img src="../assets/logo-white.png" alt="IMS Technology Services logo — white">
+  <div class="note" style="color:rgba(238,241,244,0.5)">White · on navy</div>
+</div>
+<div class="divider"></div>
+<div class="half half--light">
+  <img src="../assets/logo-white.png" alt="IMS Technology Services logo — navy" style="filter:brightness(0) saturate(100%) invert(15%) sepia(53%) saturate(1675%) hue-rotate(183deg) brightness(88%) contrast(96%)">
+  <div class="note" style="color:var(--muted)">Navy filter · on mist</div>
+</div>
+</body>
+</html>

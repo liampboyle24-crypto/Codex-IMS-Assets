@@ -1,0 +1,43 @@
+<!-- @dsCard group="Spacing" viewport="700x180" name="Corner Radius" subtitle="Structural 3px for panels · Pill for controls · Circle for status — never mix roles" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 24px; background: var(--cream); font-family: var(--font-mono); display: flex; align-items: center; gap: 28px; }
+  .shape { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .box { background: var(--navy); }
+  .label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); text-align: center; }
+  .sub   { font-size: 10px; color: var(--muted); text-align: center; margin-top: -6px; }
+  .sep { flex: 1; }
+</style>
+</head>
+<body>
+<div class="shape">
+  <div class="box" style="width:80px;height:60px;border-radius:3px"></div>
+  <div class="label">Structural</div>
+  <div class="sub">3px · panels, cards</div>
+</div>
+<div class="shape">
+  <div class="box" style="width:52px;height:52px;border-radius:12px;background:var(--teal)"></div>
+  <div class="label">Tile</div>
+  <div class="sub">12px · icon tiles</div>
+</div>
+<div class="shape">
+  <div class="box" style="width:130px;height:46px;border-radius:999px;background:var(--navy);display:flex;align-items:center;justify-content:center">
+    <span style="color:var(--cream);font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase">Engage IMS</span>
+  </div>
+  <div class="label">Pill</div>
+  <div class="sub">999px · all controls</div>
+</div>
+<div class="shape">
+  <div style="position:relative;width:36px;height:36px">
+    <div class="box" style="width:36px;height:36px;border-radius:50%;background:var(--teal-2);box-shadow:var(--glow-teal)"></div>
+  </div>
+  <div class="label">Circle</div>
+  <div class="sub">50% · status / live</div>
+</div>
+</body>
+</html>

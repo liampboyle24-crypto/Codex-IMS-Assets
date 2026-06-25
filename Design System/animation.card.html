@@ -1,0 +1,14 @@
+/**
+ * Statistical display tile — large teal figure, uppercase label, optional descriptor.
+ * Hover lifts with a deepened ambient shadow. Use in grids of 2–4.
+ */
+export interface StatItemProps {
+  /** The stat value, e.g. "99.8%" or "47" */
+  figure: string;
+  /** Short uppercase label below the figure */
+  label: string;
+  /** Optional body descriptor text */
+  desc?: string;
+  /** Use on navy/dark section backgrounds */
+  dark?: boolean;
+}

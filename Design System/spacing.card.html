@@ -1,0 +1,43 @@
+<!-- @dsCard group="Colors" viewport="700x300" name="Precision Gold & Hairlines" subtitle="Gold spent on 1–2 proof moments per section · hairlines are always tinted, never flat gray" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 20px; background: var(--cream); font-family: var(--font-mono); }
+  .row { display: flex; gap: 10px; margin-bottom: 14px; }
+  .swatch { flex: 1; border-radius: 3px; overflow: hidden; }
+  .swatch__color { height: 80px; }
+  .swatch__info { padding: 8px 12px; background: var(--paper); border: 1px solid var(--line-light); border-top: none; }
+  .swatch__name { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); }
+  .swatch__hex { font-size: 11px; color: var(--slate); margin-top: 2px; }
+  .swatch__var { font-size: 10px; color: var(--muted); margin-top: 2px; }
+  .hairlines { display: flex; gap: 10px; }
+  .hl { flex: 1; padding: 14px 16px; border-radius: 3px; display: flex; flex-direction: column; gap: 8px; }
+  .hl__rule { height: 1px; }
+  .hl__label { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; }
+  .hl__val { font-size: 10px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="swatch"><div class="swatch__color" style="background:#ECAE3D"></div><div class="swatch__info"><div class="swatch__name">Precision Gold</div><div class="swatch__hex">#ECAE3D</div><div class="swatch__var">--gold</div></div></div>
+  <div class="swatch"><div class="swatch__color" style="background:#F5CB7A"></div><div class="swatch__info"><div class="swatch__name">Soft Gold</div><div class="swatch__hex">#F5CB7A</div><div class="swatch__var">--gold-2</div></div></div>
+  <div class="swatch"><div class="swatch__color" style="background:#1A1A1A"></div><div class="swatch__info"><div class="swatch__name">Ink on Gold</div><div class="swatch__hex">#1A1A1A</div><div class="swatch__var">--ink-on-gold</div></div></div>
+</div>
+<div class="hairlines">
+  <div class="hl" style="background:var(--paper);border:1px solid var(--line-light)">
+    <div class="hl__rule" style="background:var(--line-light)"></div>
+    <div class="hl__label" style="color:var(--ink)">Hairline on Light</div>
+    <div class="hl__val">rgba(10,31,61,0.16) · --line-light</div>
+  </div>
+  <div class="hl" style="background:var(--navy)">
+    <div class="hl__rule" style="background:var(--line-dark)"></div>
+    <div class="hl__label" style="color:var(--cream)">Hairline on Dark</div>
+    <div class="hl__val" style="color:#9fb3c8">rgba(238,241,244,0.18) · --line-dark</div>
+  </div>
+</div>
+</body>
+</html>

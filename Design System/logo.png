@@ -1,0 +1,22 @@
+<!-- @dsCard group="Type" viewport="700x240" name="Display & Headline" subtitle="Archivo 800 · lh 0.92–0.95 · tracking −0.03em · text-wrap: balance" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 24px 28px; background: var(--cream); }
+  .label { font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--teal); margin-bottom: 4px; }
+  .spec   { font-family: var(--font-mono); font-size: 10px; color: var(--muted); margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="label">Display</div>
+<div style="font-family:var(--font-sans);font-size:clamp(42px,7.2vw,72px);font-weight:800;letter-spacing:-0.03em;line-height:0.92;color:var(--ink);text-wrap:balance">Reliable Collaboration</div>
+<div class="spec">Archivo 800 · size clamp(42px → 96px) · lh 0.92 · ls −0.03em</div>
+<div class="label" style="margin-top:18px">Section Headline</div>
+<div style="font-family:var(--font-sans);font-size:clamp(28px,4vw,48px);font-weight:800;letter-spacing:-0.03em;line-height:0.95;color:var(--ink)">Install Day Is Not the Finish Line</div>
+<div class="spec">Archivo 800 · size clamp(36px → 72px) · lh 0.95 · ls −0.03em · max-width 920px</div>
+</body>
+</html>

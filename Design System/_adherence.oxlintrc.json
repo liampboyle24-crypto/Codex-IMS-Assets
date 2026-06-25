@@ -1,0 +1,51 @@
+/* IMS Color System — "The Instrument Panel"
+   Base values mirror the codebase variable names exactly.
+   Semantic aliases are provided on top. */
+:root {
+  /* === Primary — Navy is the dominant surface and ink color === */
+  --navy:        #002D56;   /* Deep Navy: dominant fill, primary button, heading */
+  --navy-2:      #001830;   /* Navy Night: gradient floor, scrim depths */
+  --ink:         #0A1F3D;   /* Ink: default body/heading text on light sections */
+
+  /* === Signal — everyday interactive and "live" color === */
+  --teal:        #0A6EA8;   /* Signal Teal: links, eyebrows, stat figures (light bg) */
+  --teal-2:      #71C9F2;   /* Bright Signal: Signal Teal's on-navy counterpart */
+
+  /* === Tertiary — Precision Gold: spend sparingly, max 1–2× per section === */
+  --gold:        #ECAE3D;   /* Precision Gold: hero stats, status glow, hover accents */
+  --gold-2:      #F5CB7A;   /* Soft Gold: on-navy counterpart of Precision Gold */
+  --ink-on-gold: #1A1A1A;   /* Text color on gold fills */
+
+  /* === Neutrals === */
+  --slate:       #4D5D6E;   /* Secondary text on light backgrounds */
+  --muted:       #5B6B7D;   /* Reduced-emphasis text, labels on light */
+  --tan:         #D3DAE1;   /* Subtle divider tint */
+  --cream:       #EEF1F4;   /* Instrument Mist: page bg, on-navy text */
+  --cream-2:     #E2E7EB;   /* Mist Deeper: subtle section banding */
+  --paper:       #FFFFFF;   /* Card and surface white */
+
+  /* === Hairlines — NEVER use flat gray borders === */
+  --line-light:  rgba(10, 31, 61, 0.16);    /* Borders on light surfaces */
+  --line-dark:   rgba(238, 241, 244, 0.18); /* Borders on dark/navy surfaces */
+
+  /* === Semantic Aliases === */
+  --surface-page:       var(--cream);
+  --surface-dark:       var(--navy);
+  --surface-card:       var(--paper);
+  --surface-card-dark:  var(--navy);
+
+  --text-body:          var(--ink);
+  --text-secondary:     var(--slate);
+  --text-muted:         var(--muted);
+  --text-on-dark:       var(--cream);
+  --text-accent:        var(--teal);
+  --text-accent-dark:   var(--teal-2);
+  --text-proof:         var(--gold);
+  --text-proof-dark:    var(--gold-2);
+
+  --border-light:       var(--line-light);
+  --border-dark:        var(--line-dark);
+
+  --interactive:        var(--teal);
+  --interactive-bg:     rgba(10, 110, 168, 0.12);
+}

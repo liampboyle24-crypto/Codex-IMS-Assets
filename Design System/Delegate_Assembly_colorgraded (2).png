@@ -1,0 +1,37 @@
+<!-- @dsCard group="Spacing" viewport="700x200" name="Spacing Scale" subtitle="4px base grid · 24px gutter · section padding fluid" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 20px 24px; background: var(--cream); font-family: var(--font-mono); }
+  .scale { display: flex; align-items: flex-end; gap: 8px; }
+  .step { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .bar  { background: var(--teal); border-radius: 2px; width: 28px; }
+  .val  { font-size: 10px; font-weight: 700; color: var(--ink); letter-spacing: 0.04em; }
+  .px   { font-size: 9px; color: var(--muted); }
+  .divider { width: 1px; height: 80px; background: var(--line-light); margin: 0 4px; align-self: flex-end; }
+</style>
+</head>
+<body>
+<div class="scale">
+  <div class="step"><div class="bar" style="height:4px"></div><div class="val">—1</div><div class="px">4px</div></div>
+  <div class="step"><div class="bar" style="height:8px"></div><div class="val">—2</div><div class="px">8px</div></div>
+  <div class="step"><div class="bar" style="height:12px"></div><div class="val">—3</div><div class="px">12px</div></div>
+  <div class="step"><div class="bar" style="height:16px"></div><div class="val">—4</div><div class="px">16px</div></div>
+  <div class="step"><div class="bar" style="height:20px"></div><div class="val">—5</div><div class="px">20px</div></div>
+  <div class="step"><div class="bar" style="height:24px"></div><div class="val">—6</div><div class="px">24px</div></div>
+  <div class="step"><div class="bar" style="height:28px"></div><div class="val">—7</div><div class="px">28px</div></div>
+  <div class="step"><div class="bar" style="height:32px"></div><div class="val">—8</div><div class="px">32px</div></div>
+  <div class="divider"></div>
+  <div class="step"><div class="bar" style="height:40px;background:var(--navy)"></div><div class="val">—10</div><div class="px">40px</div></div>
+  <div class="step"><div class="bar" style="height:56px;background:var(--navy)"></div><div class="val">—14</div><div class="px">56px</div></div>
+  <div class="step"><div class="bar" style="height:80px;background:var(--navy)"></div><div class="val">—20</div><div class="px">80px</div></div>
+  <div class="divider"></div>
+  <div class="step"><div style="height:80px;display:flex;align-items:center"><div class="bar" style="height:24px;width:48px;background:var(--gold);border-radius:2px"></div></div><div class="val" style="color:var(--gold)">gutter</div><div class="px">24px</div></div>
+  <div class="step"><div style="height:80px;display:flex;align-items:center"><div class="bar" style="height:24px;width:64px;background:rgba(10,110,168,0.2);border-radius:2px"></div></div><div class="val" style="color:var(--teal)">section</div><div class="px">88→158px</div></div>
+</div>
+</body>
+</html>

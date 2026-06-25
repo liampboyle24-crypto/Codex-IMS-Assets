@@ -1,0 +1,45 @@
+<!-- @dsCard group="Motion" viewport="700x200" name="Easing Curves" subtitle="Fluid default · Out-Strong for lifts · Drawer for slides · Spring only for icon nudges" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 20px 24px; background: var(--cream); font-family: var(--font-mono); }
+  .curves { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .curve { }
+  .curve__track { height: 64px; position: relative; border-bottom: 1px solid var(--line-light); overflow: visible; }
+  .curve__ball { position: absolute; width: 11px; height: 11px; border-radius: 50%; bottom: -5px; left: 0; animation: slide 2.2s var(--anim-ease) infinite alternate; }
+  @keyframes slide { from { transform: translateX(0); } to { transform: translateX(calc(100% + 18px)); } }
+  .curve__name { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 10px; }
+  .curve__val  { font-size: 9px; color: var(--muted); margin-top: 3px; line-height: 1.5; }
+  .curve__note { font-size: 9px; color: var(--gold); margin-top: 3px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+</style>
+</head>
+<body>
+<div class="curves">
+  <div class="curve">
+    <div class="curve__track"><div class="curve__ball" style="background:var(--teal);--anim-ease:cubic-bezier(0.16,1,0.3,1)"></div></div>
+    <div class="curve__name" style="color:var(--teal)">Fluid</div>
+    <div class="curve__val">0.16, 1, 0.3, 1<br>Default for reveals, fades</div>
+  </div>
+  <div class="curve">
+    <div class="curve__track"><div class="curve__ball" style="background:var(--navy);--anim-ease:cubic-bezier(0.23,1,0.32,1)"></div></div>
+    <div class="curve__name" style="color:var(--navy)">Out Strong</div>
+    <div class="curve__val">0.23, 1, 0.32, 1<br>Hover lifts, cards</div>
+  </div>
+  <div class="curve">
+    <div class="curve__track"><div class="curve__ball" style="background:var(--muted);--anim-ease:cubic-bezier(0.32,0.72,0,1)"></div></div>
+    <div class="curve__name" style="color:var(--muted)">Drawer</div>
+    <div class="curve__val">0.32, 0.72, 0, 1<br>Slides, overlays</div>
+  </div>
+  <div class="curve">
+    <div class="curve__track"><div class="curve__ball" style="background:var(--gold);--anim-ease:cubic-bezier(0.34,1.56,0.64,1)"></div></div>
+    <div class="curve__name" style="color:var(--gold)">Spring</div>
+    <div class="curve__val">0.34, 1.56, 0.64, 1</div>
+    <div class="curve__note">Use sparingly</div>
+  </div>
+</div>
+</body>
+</html>

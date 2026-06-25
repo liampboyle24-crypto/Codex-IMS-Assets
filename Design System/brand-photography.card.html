@@ -1,0 +1,22 @@
+Statistical display tile for key metrics. Hoverable, lifts with deepened ambient shadow.
+
+```jsx
+// Light section
+<StatItem figure="99.8%" label="Uptime SLA" desc="Across all managed rooms" />
+
+// On navy section
+<StatItem figure="47" label="Enterprise Clients" dark />
+
+// Grid of three
+<div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 18 }}>
+  <StatItem figure="99.8%" label="Uptime SLA" />
+  <StatItem figure="4 hr" label="Avg Response" />
+  <StatItem figure="28yr" label="In Operation" />
+</div>
+```
+
+Props:
+- `figure`: bold large value — Signal Teal on light, Bright Signal on dark
+- `label`: 12px uppercase label below the figure
+- `desc`: optional 14px descriptor text
+- `dark`: boolean — for navy section backgrounds

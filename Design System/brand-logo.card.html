@@ -1,0 +1,54 @@
+export function StatItem({ figure, label, desc, dark = false }) {
+  const [hovered, setHovered] = React.useState(false);
+
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        padding: '26px',
+        borderRadius: '3px',
+        border: `1px solid ${dark ? 'rgba(238,241,244,0.18)' : 'rgba(10,31,61,0.12)'}`,
+        background: dark ? 'rgba(255,255,255,0.055)' : 'rgba(255,255,255,0.66)',
+        boxShadow: dark
+          ? 'inset 0 1px 0 rgba(255,255,255,0.08)'
+          : (hovered ? '0 30px 70px rgba(7,27,52,0.16)' : '0 24px 80px rgba(7,27,52,0.12)'),
+        textAlign: 'center',
+        transition: 'transform 0.2s cubic-bezier(0.23,1,0.32,1), box-shadow 0.2s cubic-bezier(0.16,1,0.3,1), border-color 0.2s cubic-bezier(0.16,1,0.3,1)',
+        transform: hovered ? 'translateY(-6px)' : 'none',
+        borderColor: hovered && !dark
+          ? 'rgba(10,110,168,0.30)'
+          : (dark ? 'rgba(238,241,244,0.18)' : 'rgba(10,31,61,0.12)'),
+      }}
+    >
+      <div style={{
+        fontFamily: "'Archivo', ui-sans-serif, sans-serif",
+        fontWeight: 800,
+        fontSize: 'clamp(42px, 5vw, 68px)',
+        lineHeight: 0.95,
+        letterSpacing: '-0.03em',
+        color: dark ? '#71C9F2' : '#0A6EA8',
+      }}>{figure}</div>
+      <div style={{
+        fontFamily: "'Archivo', ui-sans-serif, sans-serif",
+        color: dark ? '#b7c5d4' : '#4D5D6E',
+        fontSize: '12px',
+        lineHeight: 1.45,
+        textTransform: 'uppercase',
+        letterSpacing: '0.09em',
+        marginTop: '14px',
+        fontWeight: 700,
+      }}>{label}</div>
+      {desc && (
+        <div style={{
+          color: dark ? '#b7c5d4' : '#5B6B7D',
+          fontSize: '14px',
+          lineHeight: 1.6,
+          marginTop: '14px',
+          maxWidth: '270px',
+          margin: '14px auto 0',
+        }}>{desc}</div>
+      )}
+    </div>
+  );
+}

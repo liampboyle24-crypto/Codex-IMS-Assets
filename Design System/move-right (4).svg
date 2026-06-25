@@ -1,0 +1,37 @@
+<!-- @dsCard group="Type" viewport="700x200" name="Labels & Eyebrows" subtitle="Archivo 700 · ALL CAPS · tracked wide · technical voice of the system" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 24px 28px; background: var(--cream); display: flex; flex-direction: column; gap: 18px; }
+  .row { display: flex; align-items: baseline; gap: 32px; }
+  .item { display: flex; flex-direction: column; gap: 6px; }
+  .spec { font-family: var(--font-mono); font-size: 10px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="item">
+    <span style="font-family:var(--font-mono);font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--teal)">Managed Services</span>
+    <span class="spec">13px · 700 · ls 0.10em · teal · eyebrow</span>
+  </div>
+  <div class="item">
+    <span style="font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--slate)">AV Operations</span>
+    <span class="spec">11px · 700 · ls 0.13em · slate · nav label</span>
+  </div>
+</div>
+<div class="row">
+  <div class="item">
+    <span style="font-family:var(--font-mono);font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted)">Established 1997</span>
+    <span class="spec">12px · 700 · ls 0.12em · muted · meta / credential</span>
+  </div>
+  <div class="item" style="background:var(--navy);padding:10px 14px;border-radius:3px">
+    <span style="font-family:var(--font-mono);font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal-2)">Live Monitoring</span>
+    <span class="spec" style="color:#9fb3c8">11px · 700 · ls 0.12em · teal-2 · on navy</span>
+  </div>
+</div>
+</body>
+</html>

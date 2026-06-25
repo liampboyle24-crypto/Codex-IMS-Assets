@@ -1,0 +1,76 @@
+<!-- @dsCard group="Components" viewport="700x520" name="Display" subtitle="Card surfaces · Eyebrow labels · Badge chips · Stat items" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>
+  body { margin: 0; padding: 20px 24px; background: var(--cream); font-family: var(--font-mono); }
+  .sec { margin-bottom: 20px; }
+  .lbl { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+  .row { display: flex; gap: 10px; align-items: flex-start; flex-wrap: wrap; }
+  .stat-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { Card, Badge, Eyebrow, StatItem } = window.IMSTechnologyServicesDesignSystem_16e4a0;
+
+function Preview() {
+  return (
+    <div>
+      <div className="sec">
+        <div className="lbl">Eyebrow</div>
+        <div className="row">
+          <Eyebrow>Managed Services Platform</Eyebrow>
+          <div style={{background:'#002D56',padding:'8px 12px',borderRadius:'3px'}}>
+            <Eyebrow dark>Four Pillars</Eyebrow>
+          </div>
+        </div>
+      </div>
+      <div className="sec">
+        <div className="lbl">Badge</div>
+        <div className="row">
+          <Badge variant="teal">AV Managed Services</Badge>
+          <Badge variant="gold" dot>Established 1997</Badge>
+          <Badge variant="muted">Enterprise</Badge>
+          <div style={{background:'#002D56',padding:'8px 10px',borderRadius:'3px',display:'flex',gap:'8px'}}>
+            <Badge variant="teal" dark dot>Live</Badge>
+            <Badge variant="gold" dark>Pro</Badge>
+          </div>
+        </div>
+      </div>
+      <div className="sec">
+        <div className="lbl">Card</div>
+        <div className="row">
+          <Card variant="light" padding="sm" style={{minWidth:200}}>
+            <div style={{fontFamily:'var(--font-sans)',fontWeight:700,fontSize:14,color:'var(--ink)'}}>Light Card</div>
+            <div style={{fontSize:13,color:'var(--slate)',marginTop:6,lineHeight:1.5}}>Paper bg, ambient shadow, 3px structural radius.</div>
+          </Card>
+          <Card variant="navy" padding="sm" style={{minWidth:200}}>
+            <div style={{fontFamily:'var(--font-sans)',fontWeight:700,fontSize:14}}>Navy Card</div>
+            <div style={{fontSize:13,color:'#c3cedb',marginTop:6,lineHeight:1.5}}>Gradient navy bg, hairline border.</div>
+          </Card>
+        </div>
+      </div>
+      <div className="sec">
+        <div className="lbl">Stat Items</div>
+        <div className="stat-row">
+          <StatItem figure="99.8%" label="Uptime SLA" desc="All managed rooms" />
+          <StatItem figure="4 hr" label="Avg Response" />
+          <StatItem figure="47" label="Enterprise Clients" />
+        </div>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Preview />);
+</script>
+</body>
+</html>

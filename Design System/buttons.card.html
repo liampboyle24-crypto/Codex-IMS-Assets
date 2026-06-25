@@ -1,0 +1,29 @@
+/**
+ * IMS primary action component. Use for all conversion CTAs and secondary exploratory actions.
+ * Primary always routes to `#contact`; ghost covers secondary in-page navigation.
+ *
+ * @startingPoint section="Actions" subtitle="Primary CTA and ghost button variants" viewport="700x300"
+ */
+export interface ButtonProps {
+  /** Visual variant */
+  variant?: 'primary' | 'ghost';
+  /** Button size */
+  size?: 'md' | 'sm';
+  /** URL; renders as `<a>` when provided */
+  href?: string;
+  /** Click handler for `<button>` */
+  onClick?: () => void;
+  /** Renders as disabled (reduced opacity, no interactions) */
+  disabled?: boolean;
+  /**
+   * Adds the animated gold arrow badge.
+   * Primary CTAs should almost always set this to true.
+   */
+  icon?: boolean;
+  /**
+   * Adjusts ghost variant for navy/dark section backgrounds.
+   * Use whenever the button sits on `--navy` or `--navy-2`.
+   */
+  dark?: boolean;
+  children?: React.ReactNode;
+}

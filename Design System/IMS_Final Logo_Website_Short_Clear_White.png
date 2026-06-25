@@ -1,0 +1,19 @@
+/* IMS Animation Tokens — Restraint Over Spectacle
+   Default to exponential ease-out. Spring is closed-set. */
+:root {
+  /* === Easing Curves === */
+  --ease-fluid:         cubic-bezier(0.16, 1, 0.3, 1);      /* @kind other */
+  --ease-out-strong:    cubic-bezier(0.23, 1, 0.32, 1);     /* @kind other */
+  --ease-in-out-strong: cubic-bezier(0.77, 0, 0.175, 1);   /* @kind other */
+  --ease-drawer:        cubic-bezier(0.32, 0.72, 0, 1);     /* @kind other */
+
+  /* Spring — use SPARINGLY on small icon nudges only.
+     In tension with executive-ready restraint; extend cautiously. */
+  --ease-spring:        cubic-bezier(0.34, 1.56, 0.64, 1);  /* @kind other */
+
+  /* === Durations === */
+  --duration-fast:   0.15s;  /* @kind other */
+  --duration-base:   0.25s;  /* @kind other */
+  --duration-slow:   0.45s;  /* @kind other */
+  --duration-reveal: 0.85s;  /* @kind other */
+}

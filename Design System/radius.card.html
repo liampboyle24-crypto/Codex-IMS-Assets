@@ -1,0 +1,28 @@
+<!-- @dsCard group="Brand" viewport="700x260" name="Photography" subtitle="Color-graded event & boardroom photography · navy scrim for legibility" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; display: flex; height: 260px; font-family: var(--font-mono); }
+  .photo { flex: 1; position: relative; overflow: hidden; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(0,24,48,0.72) 100%); }
+  .photo__label { position: absolute; bottom: 14px; left: 14px; z-index: 1; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(238,241,244,0.7); }
+  .divider { width: 2px; background: var(--cream); flex-shrink: 0; }
+</style>
+</head>
+<body>
+<div class="photo">
+  <img src="../assets/Delegate_Assembly_colorgraded.png" alt="Delegate Assembly — IMS Technology Services">
+  <div class="photo__label">Delegate Assembly · color-graded</div>
+</div>
+<div class="divider"></div>
+<div class="photo">
+  <img src="../assets/Boardroom_CollaborationSpace.png" alt="Boardroom collaboration space">
+  <div class="photo__label">Boardroom Collaboration</div>
+</div>
+</body>
+</html>
